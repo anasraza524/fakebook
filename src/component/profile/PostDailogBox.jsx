@@ -53,7 +53,7 @@ import { FiMoreHorizontal } from 'react-icons/fi';
 // firebase
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-
+import { getAuth } from "firebase/auth";
 import {
   query, collection,
   addDoc, getDocs, doc, onSnapshot
@@ -80,8 +80,8 @@ import { upload } from '@testing-library/user-event/dist/upload';
 
 
 // Initialize Cloud Firestore and get a reference to the service
+// const auth = getAuth();
 
-const db = getFirestore();
 // PostDailohBox Function starting from here
 const PostDailogBox = () => {
 // for upload post open and close
@@ -158,7 +158,7 @@ const PostDailogBox = () => {
   
   
   
-  
+  const db = getFirestore();
   useEffect(() => {
 
 // non real time function is to set data in the firebase/firestore array
@@ -185,6 +185,8 @@ const PostDailogBox = () => {
 
 // real time function get data from firebse/firestore Post array on page load
     const getRealTimeData = async () => {
+     
+     
       const q = query(collection(db, "Posts"),
         orderBy('createdOn', 'desc'));
       unsubscribe = onSnapshot(q, (querySnapshot) => {

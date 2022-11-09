@@ -7,8 +7,20 @@ import { AiOutlinePlus  } from "react-icons/ai";
 import { BsMessenger  } from "react-icons/bs";
 import { AiFillBell  } from "react-icons/ai";
 import { VscHome  } from "react-icons/vsc";
+import {FiLogOut  } from "react-icons/fi";
+
 import { AiOutlineBars  } from "react-icons/ai";
+import { Button } from '@mui/material';
+import { getAuth, signOut } from "firebase/auth";
 function navBar(props){
+  const logout = ()=>{
+    const auth = getAuth();
+signOut(auth).then(() => {
+  // Sign-out successful.
+}).catch((error) => {
+  // An error happened.
+});
+  }
 return(
 <nav>
         <div className="nav-left">
@@ -80,7 +92,7 @@ return(
              <BsSunFill />}</button></a>
         
         
-        
+       
         
         
             <span className="profile"></span>
@@ -110,7 +122,8 @@ return(
                     
             </Link >
           
-            
+
+            <Link onClick={logout}><FiLogOut/></Link>
         </div>
     </nav>
     ) ;
