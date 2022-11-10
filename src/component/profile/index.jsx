@@ -165,11 +165,11 @@ function profile() {
                                
                               }}
                              />
-                        <label htmlFor="profileButton">
+                        {/* <label htmlFor="profileButton">
                         <BiImageAdd 
                         style={{ fontSize: "35px",
                         position:'absolute',top:'35%',right:'310px' }}/>
-                        </label>
+                        </label> */}
                
                </div>
                 <div className="prfileBox">
@@ -201,6 +201,7 @@ function profile() {
                 </div>
 <div className='ProfileBody'>
                 <div className="profileRightPannel">
+                    <div className='profileRightPannelChild'>
                     <div className="unlockProfile">
                         <span>
 
@@ -238,7 +239,7 @@ function profile() {
                             </table>
                         </div>
                     </div>
-                </div>
+                </div></div>
                 <div className="profileLeftPannel">
 
 <PostDailogBox/>

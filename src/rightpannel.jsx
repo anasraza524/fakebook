@@ -4,7 +4,8 @@
   function rightPannel() {
 return (
     <div className="container">
-        <div className="left-panel">
+        <div className="left-panel" >
+          <div className="left-panel-child" >
             <ul>
                 
                 <li>
@@ -69,7 +70,7 @@ return (
                 <a href="/">Advance</a>
                 <a href="/">More</a> 
             </div> */}
-        </div></div>
+        </div></div></div>
   );
   }
   export default rightPannel;

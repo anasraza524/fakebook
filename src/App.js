@@ -45,10 +45,27 @@ import "./App.css";
     }
   });
   
+
+
+  // const auth = getAuth();
+  // const user = auth.currentUser;
+  
+  // if (user) {
+  //   // User is signed in, see docs for a list of available properties
+  //   // https://firebase.google.com/docs/reference/js/firebase.User
+  //   // ...
+  //   setisLogin(false)
+  // } else {
+  //   // No user is signed in.
+  //   setisLogin(true)
+  // }
+
+
+
    return()=>{
     console.log('cleanUp function')
-    Unsubscribe()
-   }
+   Unsubscribe()
+ }
    
   }, [])
  
@@ -84,12 +101,13 @@ import "./App.css";
 
 
 <Routes>
-      <Route index element={<Home/>} />
-      <Route path="Home" element={<Home/>} />
+      {/* <Route index element={<Home/>} /> */}
+      <Route path="/" element={<Home/>} />
       <Route path="profile" element={<Profile/>} />
       <Route path="page" element={<Page/>} />
       <Route path="vidoe" element={<Vidoe/>} />
       <Route path="gruop" element={<Gruop/>} />
+      <Route path="*" element={<Navigate to="/" replace={true} />} />
     </Routes>
     <div><Leftpannel/></div>
 </div>

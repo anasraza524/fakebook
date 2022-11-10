@@ -2,8 +2,9 @@ import './App.css'
 
 function leftpannel(){
 return(
-<div class="right-panel">
-            <div class="pages-section">
+    <div class="right-panel">
+    <div className="right-panel-child">
+            <div class="pages-section"> 
                 <h4>Your pages</h4>
                 <a class='page' href="/">
                     <div class="dp">
@@ -65,7 +66,7 @@ return(
                     </div>
                     <p class="name">Humayun</p>
                 </a>
-                
+                </div>
             </div>
         </div>
     

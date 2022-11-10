@@ -57,12 +57,12 @@ function From(){
        validationSchema: validationSchema,
        
         onSubmit: (values) => {
-          setEmail(values.email)
-        setPassword(values.password)
+        //   setEmail(values.email)
+        // setPassword(values.password)
           console.log("values" ,values);
           
           const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
+createUserWithEmailAndPassword(auth, values.email, values.password)
   .then((userCredential) => {
     // Signed in 
 

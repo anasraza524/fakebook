@@ -19,12 +19,15 @@
 .profileBody{
     max-width: 1000px;
     color: var(--font-color);
-margin: 5px;
+margin: 1px;
 border-radius: 5px;
+
+  
+
 }
 .coverPhoto{
 
-height: 250px;
+height: 280px;
 width: 1000px;
 
 }
@@ -96,3 +99,9 @@ top: 10%;
  
   height:calc(110vh - 150px);
 }
+/* .profileRightPannelChild{
+    background-color: var(--bg-color);
+    position: fixed;
+    width:290px;
+    height: 100%;
+}  */

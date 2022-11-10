@@ -134,11 +134,23 @@ nav .nav-right a > i{
   height:calc(120vh - 70px);
 
 }
+.left-panel-child{
+  background-color: var(--bg-color);
+  position: fixed;
+  width:290px;
+  height: 100%;
+}
+.right-panel-child{
+  background-color: var(--bg-color);
+  position: fixed;
+  width:290px;
+  height: 100%;
+}
 .container .left-panel{
   position: sticky;
   top:80px;
   width:290px;
-  height:calc(120vh - 70px);
+  height:calc(130vh - 70px);
 justify-content: left;
 }
 

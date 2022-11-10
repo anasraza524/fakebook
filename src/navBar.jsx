@@ -30,7 +30,7 @@ return(
 
         <div className="nav-middle">
 
-        <Link to="/Home" className="active">
+        <Link to="/" className="active">
             <VscHome className='homeicon'  />
             </Link>
             <Link to="/profile" >

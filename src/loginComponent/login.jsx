@@ -10,8 +10,8 @@ import { getAuth,
 import {   } from "firebase/auth";
 function Login (){
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [password, setPassword] = useState('')
   const validationSchema= yup.object({
     email: yup
       .string('Enter your email')
@@ -30,12 +30,12 @@ function Login (){
         },
        validationSchema: validationSchema,
         onSubmit: (values) => {
-          setEmail(values.email)
-        setPassword(values.password)
+        //   setEmail(values.email)
+        // setPassword(values.password)
           console.log("values" ,values);
 
           const auth = getAuth();
-          signInWithEmailAndPassword(auth, email, password)
+          signInWithEmailAndPassword(auth, values.email, values.password)
             .then((userCredential) => {
               // Signed in 
               const user = userCredential.user;
